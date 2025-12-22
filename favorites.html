@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Избранное - СПАРТА</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="logo-area">
+                    <a href="index.html" class="logo">
+                        <div class="logo-img">
+                            <span class="logo-fire"><img src="/images/Снимок экрана 2025-12-16 170533-Photoroom.png" alt="" height="80px" width=""></span>
+                        </div>
+                        <div class="logo-subtitle">Официальный дистрибьютор материалов для строительства и ремонта линий связи, оптический кабель, электротехническая продукция</div>
+                    </a>
+                </div>
+                
+                <div class="header-contacts">
+                    <div class="contact-phone">
+                        <i class="fas fa-phone"></i>
+                        <span>8 (800) 222-20-27</span>
+                    </div>
+                    <div class="contact-email">
+                        <i class="fas fa-envelope"></i>
+                        <span>sparta@sparta-vt.nnov.ru</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="header-bottom">
+
+                <div class="catalog-menu">
+                    <button class="catalog-btn" id="catalogBtn">
+                        <div class="burger-icon">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <span class="catalog-text">Каталог</span>
+                    </button>
+                    
+                    <div class="catalog-dropdown" id="catalogDropdown">
+                        <div class="catalog-categories">
+                            <a href="#" class="category-item">
+                                <i class="fas fa-satellite-dish"></i>
+                                <span>Инженерные инфраструктуры связи, энергетики, водоотведения</span>
+                            </a>
+                            <a href="#" class="category-item">
+                                <i class="fas fa-bolt"></i>
+                                <span>Монтаж кабелей связи и энергетики</span>
+                            </a>
+                            <a href="#" class="category-item">
+                                <i class="fas fa-fiber"></i>
+                                <span>Оптические кабели связи</span>
+                            </a>
+                            <a href="#" class="category-item">
+                                <i class="fas fa-bolt"></i>
+                                <span>Кабели и провода силовые</span>
+                            </a>
+                            <a href="#" class="category-item">
+                                <i class="fas fa-wrench"></i>
+                                <span>Монтаж оптических кабелей связи</span>
+                            </a>
+                            <a href="#" class="category-item">
+                                <i class="fas fa-network-wired"></i>
+                                <span>Монтаж структурированных кабельных систем</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="about.html" >О компании</a></li>
+                        <li><a href="news.html">Новости</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </nav>
+
+                <div class="search-container">
+                    <input type="text" class="search-input" placeholder="Поиск товаров...">
+                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+
+                <div class="user-icons">
+                    <button class="icon-btn" id="loginBtn">
+                        <i class="fas fa-user"></i>
+                        <span class="icon-text">Войти</span>
+                    </button>
+                    <a href="compare.html" class="icon-btn">
+                        <i class="fas fa-balance-scale"></i>
+                        <span class="icon-text">Сравнение</span>
+                        <span class="icon-counter">3</span>
+                    </a>
+                    <a href="favorites.html" class="icon-btn active">
+                        <i class="fas fa-heart"></i>
+                        <span class="icon-text">Избранное</span>
+                        <span class="icon-counter">5</span>
+                    </a>
+                    <a href="cart.html" class="icon-btn cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="icon-text">Корзина</span>
+                        <span class="icon-counter">2</span>
+                    </a>
+                </div>
+
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="mobile-menu-header">
+                <button class="mobile-menu-close" id="mobileMenuClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <nav class="mobile-nav">
+                <a href="index.html" class="mobile-nav-item ">Главная</a>
+                <a href="about.html" class="mobile-nav-item ">О компании</a>
+                <a href="news.html" class="mobile-nav-item">Новости</a>
+                <a href="contacts.html" class="mobile-nav-item">Контакты</a>
+                <a href="cart.html" class="mobile-nav-item">Корзина</a>
+                <a href="favorites.html" class="mobile-nav-item active">Избранное</a>
+                <a href="compare.html" class="mobile-nav-item">Сравнение</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">
+                <i class="fas fa-times"></i>
+            </button>
+            
+            <div class="auth-tabs">
+                <button class="auth-tab active" data-tab="login">Вход</button>
+                <button class="auth-tab" data-tab="register">Регистрация</button>
+            </div>
+            
+            <div class="auth-content">
+                <form class="auth-form active" id="loginForm">
+                    <h3>Вход в личный кабинет</h3>
+                    <div class="form-group">
+                        <input type="email" placeholder="E-mail" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" placeholder="Пароль" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Войти</button>
+                    <div class="auth-links">
+                        <a href="#">Забыли пароль?</a>
+                    </div>
+                </form>
+                
+                <form class="auth-form" id="registerForm">
+                    <h3>Регистрация</h3>
+                    <div class="form-group">
+                        <input type="text" placeholder="Имя" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="E-mail" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" placeholder="Пароль" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" placeholder="Повторите пароль" required>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" id="agreeTerms" required>
+                        <label for="agreeTerms">Я согласен с условиями обработки персональных данных</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Зарегистрироваться</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <section class="breadcrumbs">
+        <div class="container">
+            <nav class="breadcrumb-nav">
+                <a href="index.html">Главная</a>
+                <span class="separator">/</span>
+                <span class="current">Избранное</span>
+            </nav>
+        </div>
+    </section>
+
+    <main class="favorites-page">
+        <div class="container">
+            <h1 class="page-title">Избранное</h1>
+            
+            <div class="filters">
+                <div class="filters-header">
+                    <span class="favorites-count">5 товаров в избранном</span>
+                    <button class="btn btn-secondary clear-all">
+                        <i class="fas fa-trash"></i> Очистить все
+                    </button>
+                </div>
+                
+                <div class="sort-options">
+                    <select class="sort-select">
+                        <option value="date">Сначала новые</option>
+                        <option value="price-asc">По возрастанию цены</option>
+                        <option value="price-desc">По убыванию цены</option>
+                        <option value="name">По названию</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="favorites-grid">
+            </div>
+            
+            <div class="empty-favorites" style="display: none;">
+                <div class="empty-state">
+                    <i class="fas fa-heart fa-4x" style="color: var(--gray-light); margin-bottom: 20px;"></i>
+                    <h3>В избранном пока нет товаров</h3>
+                    <p>Добавляйте товары в избранное, чтобы не потерять</p>
+                    <a href="index.html" class="btn btn-primary">Перейти в каталог</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <span class="logo-fire"><img src="/images/Снимок экрана 2025-12-16 170533-Photoroom.png" alt="" height="80px"></span>
+                    </div>
+                    <p class="footer-description">Официальный дистрибьютор материалов для строительства и ремонта линий связи, оптический кабель, электротехническая продукция.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Категории</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Оптические кабели связи</a></li>
+                        <li><a href="#">Кабели и провода силовые</a></li>
+                        <li><a href="#">Монтаж кабелей связи</a></li>
+                        <li><a href="#">Инженерные инфраструктуры</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Компания</h3>
+                    <ul class="footer-links">
+                        <li><a href="about.html">О компании</a></li>
+                        <li><a href="news.html">Новости</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                        <li><a href="#">Доставка и оплата</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Контакты</h3>
+                    <div class="footer-contacts">
+                        <p><i class="fas fa-phone"></i> 8 (800) 222-20-27</p>
+                        <p><i class="fas fa-envelope"></i> sparta@sparta-vt.nnov.ru</p>
+                        <p><i class="fas fa-clock"></i> Пн-Пт: 9:00-18:00</p>
+                        <p><i class="fas fa-map-marker-alt"></i>Нижегородская обл., г.Дзержинск, пр-т Чкалова 49-Б</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 СПАРТА. Все права защищены.</p>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-vk"></i></a>
+                    <a href="#"><i class="fab fa-telegram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/header.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/favorites.js"></script>
+</body>
+</html>
