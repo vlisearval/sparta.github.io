@@ -1072,7 +1072,16 @@ body {
     .slide-content h1 {
         font-size: 24px;
     }
+    .logo-fire img {
+        height: 50px !important;
+        width: auto !important;
+    }
     
+    .logo-subtitle {
+        font-size: 10px;
+        max-width: 300px;
+        margin-top: 3px;
+    }
     .products-prev, .products-next {
         display: none;
     }
