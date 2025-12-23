@@ -1032,6 +1032,18 @@ body {
 }
 
 @media (max-width: 768px) {
+    .header {
+        position: sticky; /* Оставляем sticky */
+        top: 0;
+        /* Делаем хедер меньше */
+        max-height: 60px; /* Ограничиваем высоту */
+        overflow: hidden;
+    }
+    
+    .header:hover,
+    .header:focus-within {
+        max-height: none; /* Раскрываем при наведении/фокусе */
+    }
     .header-top {
         flex-direction: column;
         gap: 15px;
